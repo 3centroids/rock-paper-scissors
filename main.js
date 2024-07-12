@@ -80,20 +80,33 @@ let losses = 0;
 
 let c_user = -1;
 
+// TODO: clean this mess
 document.addEventListener("keydown", function(event) {
+    if (event.key != "r" && event.key != "p" && event.key != "s" && event.key != "Enter") {
+        return;
+    }
+    const weapon = document.getElementById("weapon-canvas").getContext("2d");
+    const weapon_image = new Image();
+    weapon_image.onload = () => {
+        weapon.drawImage(weapon_image, 0, 0);
+    };
+    weapon.clearRect(0, 0, 256, 256);
     if (event.key == "r") {
         console.log("rock");
         document.getElementById("weapon").textContent="rock";
+        weapon_image.src = "./assets/rock.png";
         c_user = 0;
     }
     if (event.key == "p") {
         console.log("paper");
         document.getElementById("weapon").textContent="paper";
+        weapon_image.src = "./assets/paper.png";
         c_user = 1;
     }
     if (event.key == "s") {
         console.log("scissors");
         document.getElementById("weapon").textContent="scissors";
+        weapon_image.src = "./assets/scissors.png";
         c_user = 2;
     }
     if (event.key == "Enter") {
