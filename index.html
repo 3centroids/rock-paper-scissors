@@ -7,11 +7,28 @@
 </head>
 <body>
     <h1>Play rock-paper-scissors with your computer!</h1>
-    <p>check console for output</p>
-    <form>
-        <input type="number" id="user-input">
-        <input type="submit" value="PRESS HERE" id="run">
-    </form>
+    <button id="run">PRESS HERE</button>
+    <p id="result"></p>
+    <p>weapon selected: <span id="weapon">none</span></p>
+    <p>
+        pick your weapon!
+        <code>
+            <ul>
+                <li>[r]ock</li>
+                <li>[p]aper</li>
+                <li>[s]cissors</li>
+            </ul>
+        </code>
+    </p>
+    <p>
+        statistics
+        <ul>
+            <li>wins: <span id="wins">0</span></li>
+            <li>draws: <span id="draws">0</span></li>
+            <li>losses: <span id="losses">0</span></li>
+            <li>games played: <span id="games">0</span></li>
+        </ul>
+    </p>
     <script src="./main.js"></script>
 </body>
 </html>

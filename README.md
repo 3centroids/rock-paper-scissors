@@ -1,12 +1,13 @@
 # rock paper scissors
+
 ## TODO
-[x] add button to start new game
-[x] accept user input in text field
-[x] validate user input
-[ ] add text messages
-[ ] add pixel art images of rock, paper and scissors
-[ ] add animations
-[ ] update to Typescript
+- [x] add button to start new game
+- [ ] display previous games
+- [ ] add text messages
+- [ ] add pixel art images of rock, paper and scissors
+- [ ] add animations
+- [ ] update to Typescript
+
 ## cheatsheet
 echo "# rock-paper-scissors" >> README.md
 git init
